@@ -1,4 +1,8 @@
-
+# integrantes
+<ul>
+  <li>Najera Castro Juan Pablo</li>
+  <li>Lopez Perez Carlos Daniel</li>
+</ul>
 
 # version
 0.1.1
