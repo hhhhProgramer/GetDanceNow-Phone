@@ -1,16 +1,15 @@
-# getdancenow
 
-A new Flutter project.
 
-## Getting Started
+# version
+0.1.1
 
-This project is a starting point for a Flutter application.
+# Descripcion
+<p>
+Desarrollar un software que permita a las personas encontrar academias cerca de su localidad y de igual manera poder realizar una suscripción a las clases de bailes. 
+</p>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Tecnologias
+<ul>
+  <li>Flutter</li>
+  <li>Dart</li>
+</ul>
