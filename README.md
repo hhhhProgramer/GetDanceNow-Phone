@@ -1,4 +1,3 @@
-# Get Dance Now
 # integrantes
 <ul>
   <li>Najera Castro Juan Pablo</li>
