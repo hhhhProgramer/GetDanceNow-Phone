@@ -7,97 +7,132 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  static Color color1 = Colors.lightGreen[700];
-  static Color color2 = Colors.blue[400];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Login"),
-      ),
       body: Center(
         child: ListView(children: <Widget>[
-          /*Image.asset(
-            "images/UTM.png",
+          Image.asset(
+            "images/logo.png",
             fit: BoxFit.cover,
-          ),*/
-          tituloseccion,
-          botones,
-          Container(
-            padding: const EdgeInsets.all(32),
-            child: Text(
-              "Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese",
-              softWrap: true,
-            ),
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          _buildCorreo(),
+          SizedBox(
+            height: 20,
+          ),
+          _buildContrasena(),
+          SizedBox(
+            height: 20,
+          ),
+          _buildButtons(),
+          SizedBox(
+            height: 20,
+          ),
+          _buildRegister()
         ]),
+      ),
+      backgroundColor: Colors.grey[800],
+    );
+  }
+
+  Widget _buildCorreo() {
+    return new Container(
+      child: new Column(
+        children: <Widget>[
+          new Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(30),
+              ),
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.all(20),
+                  fillColor: Colors.white,
+                  hintText: "Correo electronico",
+                  hintStyle: TextStyle(color: Colors.white)),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget tituloseccion = Container(
-    padding: const EdgeInsets.all(32),
-    child: Row(children: <Widget>[
-      Expanded(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+  Widget _buildContrasena() {
+    return new Container(
+      child: new Column(
         children: <Widget>[
-          Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
-                "Universidad Tecnológica Metropolitana",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
-          Text(
-            "Desarrollo de software multiplataforma",
-            style: TextStyle(
-              color: Colors.grey[500],
+          new Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(30),
+              ),
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.all(20),
+                  fillColor: Colors.white,
+                  hintText: "Contraseña",
+                  hintStyle: TextStyle(color: Colors.white)),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildButtons() {
+    return new Container(
+      child: new Column(
+        children: <Widget>[
+          new Container(
+            decoration: BoxDecoration(
+              color: Colors.black,
+              border: Border.all(
+                color: Colors.black,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(30),
+              ),
+            ),
+            child: MaterialButton(
+              minWidth: 300.0,
+              height: 50,
+              onPressed: () {},
+              child:
+                  Text('Iniciar sesión', style: TextStyle(color: Colors.white)),
             ),
           )
         ],
-      )),
-      Icon(
-        Icons.star,
-        color: Colors.red[500],
       ),
-      Text("5")
-    ]),
-  );
-
-  static Column _creaColumna(Color color, IconData icon, String texto) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(
-          icon,
-          color: color,
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 8),
-          child: Text(
-            texto,
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-              color: color,
-            ),
-          ),
-        )
-      ],
     );
   }
 
-  Widget botones = Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        _creaColumna(color1, Icons.call, "Llamar"),
-        _creaColumna(color2, Icons.near_me, "Navegar"),
-        _creaColumna(color1, Icons.share, "Comparte")
-      ],
-    ),
-  );
+  Widget _buildRegister() {
+    return new Container(
+      child: new Column(
+        children: <Widget>[
+          Text("¿No estás registrado?"),
+          MaterialButton(
+            minWidth: 300.0,
+            height: 40.0,
+            onPressed: () {},
+            child: TextButton(child: Text('Registrarme!'), onPressed: () {}),
+          ),
+        ],
+      ),
+    );
+  }
 }
